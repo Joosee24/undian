@@ -30,21 +30,28 @@
       <div>
         <div class="dropdown" id="button_sayang">
           <p class="price">Price Pool</p>
-          <button
-            class="btn btn-secondary dropdown-toggle"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Dropdown button
-          </button>
-          <ul class="dropdown-menu" id="ganti">
-            <li><a class="dropdown-item" href="#" value="mobil">mobil</a></li>
-            <li><a class="dropdown-item" href="#" value="motor">motor</a></li>
-            <li><a class="dropdown-item" href="#" value="hp">hp</a></li>
-          </ul>
+          <div class="option">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Pilih Hadiah
+            </button>
+
+            <ul class="dropdown-menu" id="ganti">
+              <li>
+                <a class="dropdown-item" href="#" value="mobil">mobil</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" value="motor">motor</a>
+              </li>
+              <li><a class="dropdown-item" href="#" value="hp">hp</a></li>
+            </ul>
+          </div>
+          <div class="rendering_img"></div>
         </div>
-        <div class="rendering_img"></div>
       </div>
       <div class="peserta">
         <span>Nama perserta udian</span>
@@ -58,13 +65,13 @@
         var value = $(this).attr("value");
         var img_src;
         if (value == "mobil") {
-          img_src =
-            "/asset/png-clipart-jasa-marga-persero-indonesian-rupiah-business-idx-jsmr-business-blue-text-removebg-preview.png";
+          img_src = "/asset/banner-SK-_1_-removebg-preview.png";
         } else if (value == "motor") {
           img_src =
             "asset/yamaha-rilis-motor-hybrid-bergaya-retro-harga-jauh-di-bawah-pcx-ehev_169-removebg-preview.png";
         } else if (value == "hp") {
-          img_src = "/path/to/hp_image.png";
+          img_src =
+            "/asset/iphone_14_pro_deep_purple_2_9-1000x1000-removebg-preview.png";
         }
 
         var img_ctl = '<img src="' + img_src + '" alt="image">';
