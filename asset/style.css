@@ -1,0 +1,53 @@
+/* Example styles in style.css */
+body {
+  /* background-color: #900909; */
+}
+
+.undian {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+}
+
+.dropdown {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid;
+  width: max-content;
+  margin: 2rem 0 0 1rem;
+}
+
+.price {
+  margin: 0;
+}
+
+.list ul {
+  padding: 0;
+}
+
+.list li {
+  list-style: none;
+}
+
+.peserta {
+  border: 1px solid;
+  width: max-content;
+  margin-right: 1rem;
+}
+
+.rendering_img {
+  -webkit-animation: scale 3s infinite linear;
+}
+
+@-webkit-keyframes scale {
+  from {
+    -webkit-transform: scale(0.7);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
