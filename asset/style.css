@@ -1,6 +1,24 @@
-/* Example styles in style.css */
+:root {
+  /* --background: linear-gradient(to bottom, #e5e38b, #e3e2a4, #ffffff);
+  --content: linear-gradient(to bottom, #e5e38b, #ffffff); */
+}
 body {
-  /* background-color: #900909; */
+  background-color: #f0f0f0;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: rgba(255, 0, 0, 0.826); */
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  margin-right: 2rem;
 }
 
 .undian {
@@ -19,6 +37,8 @@ body {
   border: 1px solid;
   width: max-content;
   margin: 2rem 0 0 1rem;
+  background: var(--content);
+  box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.2);
 }
 
 .option {
@@ -42,6 +62,9 @@ body {
   border: 1px solid;
   width: max-content;
   margin-right: 1rem;
+  padding: 1rem;
+  background: var(--content);
+  box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.2);
 }
 
 .rendering_img {

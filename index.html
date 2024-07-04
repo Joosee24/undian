@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="asset/style.css" />
     <title>Undian</title>
   </head>
-  <style></style>
   <body>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -25,6 +24,10 @@
         src="/asset/png-clipart-jasa-marga-persero-indonesian-rupiah-business-idx-jsmr-business-blue-text-removebg-preview.png"
         width="20%"
       />
+      <ul class="nav">
+        <li>pemenang</li>
+        <li>login</li>
+      </ul>
     </div>
     <div class="undian">
       <div>
@@ -39,7 +42,6 @@
             >
               Pilih Hadiah
             </button>
-
             <ul class="dropdown-menu" id="ganti">
               <li>
                 <a class="dropdown-item" href="#" value="mobil">mobil</a>
@@ -47,44 +49,80 @@
               <li>
                 <a class="dropdown-item" href="#" value="motor">motor</a>
               </li>
-              <li><a class="dropdown-item" href="#" value="hp">hp</a></li>
+              <li>
+                <a class="dropdown-item" href="#" value="hp">hp</a>
+              </li>
             </ul>
           </div>
           <div class="rendering_img"></div>
         </div>
       </div>
       <div class="peserta">
-        <span>Nama perserta udian</span>
+        <div>
+          <input type="text" id="nama-input" placeholder="Masukkan nama" />
+          <button class="btn btn-primary" id="daftar-button">Daftar</button>
+        </div>
         <p id="demo"></p>
       </div>
     </div>
-  </body>
-  <script>
-    $(document).ready(function () {
-      $("#ganti .dropdown-item").click(function () {
-        var value = $(this).attr("value");
-        var img_src;
-        if (value == "mobil") {
-          img_src = "/asset/banner-SK-_1_-removebg-preview.png";
-        } else if (value == "motor") {
-          img_src =
-            "asset/yamaha-rilis-motor-hybrid-bergaya-retro-harga-jauh-di-bawah-pcx-ehev_169-removebg-preview.png";
-        } else if (value == "hp") {
-          img_src =
-            "/asset/iphone_14_pro_deep_purple_2_9-1000x1000-removebg-preview.png";
+    <script>
+      $(document).ready(function () {
+        var participants = [];
+
+        $("#ganti .dropdown-item").click(function () {
+          var value = $(this).attr("value");
+          var img_src;
+
+          if (value == "mobil") {
+            img_src = "/asset/banner-SK-_1_-removebg-preview.png";
+          } else if (value == "motor") {
+            img_src =
+              "/asset/yamaha-rilis-motor-hybrid-bergaya-retro-harga-jauh-di-bawah-pcx-ehev_169-removebg-preview.png";
+          } else if (value == "hp") {
+            img_src =
+              "/asset/iphone_14_pro_deep_purple_2_9-1000x1000-removebg-preview.png";
+          }
+
+          var img_ctl = '<img src="' + img_src + '" alt="image">';
+          $(".rendering_img").html(img_ctl);
+
+          // Update participant list
+          updateParticipantList();
+        });
+
+        // Function to update participant list display
+        function updateParticipantList() {
+          let text = "";
+          for (let i = 0; i < participants.length; i++) {
+            text += participants[i] + "<br>";
+          }
+          document.getElementById("demo").innerHTML = text;
         }
 
-        var img_ctl = '<img src="' + img_src + '" alt="image">';
-        $(".rendering_img").html(img_ctl);
+        // Daftar button click event
+        $("#daftar-button").click(function () {
+          tambahNama();
+        });
+
+        // Input field enter keypress event
+        $("#nama-input").keypress(function (event) {
+          if (event.which === 13) {
+            tambahNama();
+          }
+        });
+
+        // Function to add name to participants list
+        function tambahNama() {
+          var inputNama = $("#nama-input").val().trim();
+          if (inputNama !== "") {
+            participants.push(inputNama);
+            updateParticipantList();
+            $("#nama-input").val(""); // Clear input field
+          } else {
+            alert("Masukkan nama peserta terlebih dahulu.");
+          }
+        }
       });
-    });
-
-    const cars = ["Saab", "Volvo", "BMW"];
-    let text = "";
-    for (let i = 0; i < cars.length; i++) {
-      text += cars[i] + "<br>";
-    }
-
-    document.getElementById("demo").innerHTML = text;
-  </script>
+    </script>
+  </body>
 </html>
