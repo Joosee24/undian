@@ -62,10 +62,14 @@
           <input type="text" id="nama-input" placeholder="Masukkan nama" />
           <button class="btn btn-primary" id="daftar-button">Daftar</button>
         </div>
-        <p id="demo"></p>
+        <div id="nama_pemenang">
+          <!-- data dari backend -->
+        </div>
+
         <button class="btn btn-danger" id="clear-button">Clear All</button>
       </div>
     </div>
+
     <script>
       $(document).ready(function () {
         // Retrieve participants from local storage
@@ -75,32 +79,49 @@
         $("#ganti .dropdown-item").click(function () {
           var value = $(this).attr("value");
           var img_src;
+          const nama_mobil = ["jose", "salsa", "alenny", "rafael", "adit"];
+          const nama_motor = ["jose", "salsa", "alenny", "rafael", "adit"];
+          const nama_hp = ["jose", "salsa", "alenny", "rafael", "adit"];
 
+          // console.log(nama_mobil);
           if (value == "mobil") {
+            var no = 1;
             img_src = "/asset/banner-SK-_1_-removebg-preview.png";
+            for (let i = 0; i < nama_mobil.length; i++) {
+              var text = "Pemenang Ke-" + no + " " + nama_mobil[i] + "<br>";
+              $("#nama_pemenang").append(text);
+              no++;
+            }
           } else if (value == "motor") {
             img_src =
               "/asset/yamaha-rilis-motor-hybrid-bergaya-retro-harga-jauh-di-bawah-pcx-ehev_169-removebg-preview.png";
+            var no = 1;
+            img_src = "/asset/banner-SK-_1_-removebg-preview.png";
+            for (let i = 0; i < nama_motor.length; i++) {
+              var text = "Pemenang Ke-" + no + " " + nama_mobil[i] + "<br>";
+              $("#nama_pemenang").append(text);
+              no++;
+            }
           } else if (value == "hp") {
             img_src =
               "/asset/iphone_14_pro_deep_purple_2_9-1000x1000-removebg-preview.png";
+            var no = 1;
+            img_src = "/asset/banner-SK-_1_-removebg-preview.png";
+            for (let i = 0; i < nama_hp.length; i++) {
+              var text = "Pemenang Ke-" + no + " " + nama_mobil[i] + "<br>";
+              $("#nama_pemenang").append(text);
+              no++;
+            }
           }
 
           var img_ctl = '<img src="' + img_src + '" alt="image">';
           $(".rendering_img").html(img_ctl);
 
           // Update participant list
-          updateParticipantList();
+          // updateParticipantList();
         });
 
         // Function to update participant list display
-        function updateParticipantList() {
-          let text = "";
-          for (let i = 0; i < participants.length; i++) {
-            text += participants[i] + "<br>";
-          }
-          document.getElementById("demo").innerHTML = text;
-        }
 
         // click button
         $("#daftar-button").click(function () {
@@ -118,7 +139,7 @@
         $("#clear-button").click(function () {
           participants = [];
           localStorage.setItem("participants", JSON.stringify(participants));
-          updateParticipantList();
+          // updateParticipantList();
         });
 
         // inpur name
@@ -127,15 +148,14 @@
           if (inputNama !== "") {
             participants.push(inputNama);
             localStorage.setItem("participants", JSON.stringify(participants));
-            updateParticipantList();
+            // updateParticipantList();
             $("#nama-input").val("");
           } else {
             alert("Masukkan nama peserta terlebih dahulu.");
           }
         }
-
         // Initial call to update participant list display on page load
-        updateParticipantList();
+        // updateParticipantList();
       });
     </script>
   </body>
