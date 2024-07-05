@@ -63,11 +63,14 @@
           <button class="btn btn-primary" id="daftar-button">Daftar</button>
         </div>
         <p id="demo"></p>
+        <button class="btn btn-danger" id="clear-button">Clear All</button>
       </div>
     </div>
     <script>
       $(document).ready(function () {
-        var participants = [];
+        // Retrieve participants from local storage
+        var participants =
+          JSON.parse(localStorage.getItem("participants")) || [];
 
         $("#ganti .dropdown-item").click(function () {
           var value = $(this).attr("value");
@@ -99,29 +102,40 @@
           document.getElementById("demo").innerHTML = text;
         }
 
-        // Daftar button click event
+        // click button
         $("#daftar-button").click(function () {
           tambahNama();
         });
 
-        // Input field enter keypress event
+        // enter button
         $("#nama-input").keypress(function (event) {
           if (event.which === 13) {
             tambahNama();
           }
         });
 
-        // Function to add name to participants list
+        // clear button click event
+        $("#clear-button").click(function () {
+          participants = [];
+          localStorage.setItem("participants", JSON.stringify(participants));
+          updateParticipantList();
+        });
+
+        // inpur name
         function tambahNama() {
           var inputNama = $("#nama-input").val().trim();
           if (inputNama !== "") {
             participants.push(inputNama);
+            localStorage.setItem("participants", JSON.stringify(participants));
             updateParticipantList();
-            $("#nama-input").val(""); // Clear input field
+            $("#nama-input").val("");
           } else {
             alert("Masukkan nama peserta terlebih dahulu.");
           }
         }
+
+        // Initial call to update participant list display on page load
+        updateParticipantList();
       });
     </script>
   </body>
