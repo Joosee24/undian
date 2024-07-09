@@ -2,6 +2,7 @@
 
 :root {
   --background: linear-gradient(#55ad9b, #95d2b3);
+  --background-nav: rgba(0, 128, 128, 0.3);
   --font-nav: #f1f8e8;
   --background-div: #95d2b3;
   --background-content: linear-gradient(
@@ -13,18 +14,27 @@
   );
   --background-menu: linear-gradient(#34e89e, #0f3443);
 }
+html,
 body {
   background: var(--background);
   background-attachment: fixed;
   background-size: cover;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.isi {
+  flex: 1;
 }
 
 .logo {
   display: flex;
   justify-content: space-between;
-  background-color: rgba(0, 128, 128, 0.3);
+  background: var(--background-nav);
   backdrop-filter: blur(20px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px #0b666a;
 }
 
 .nav {
@@ -80,7 +90,7 @@ body {
   width: max-content;
   margin: 2rem 0 0 1rem;
   background-color: var(--background-div);
-  box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px 2px #0b666a;
   border: 1px solid;
   padding: 20px;
   border-radius: 10px;
@@ -130,7 +140,7 @@ body {
   margin: 1rem 1rem 0 0;
   padding: 1rem;
   background-color: var(--background-div);
-  box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px 2px #0b666a;
 }
 
 .rendering_img {
@@ -145,6 +155,13 @@ body {
     -webkit-transform: scale(0.7);
   }
   to {
-    -webkit-transform: scale(1);
+    -webkit-transform: scale(0.8);
   }
+}
+
+.bar-footer {
+  background: var(--background-nav);
+  color: var(--font-nav);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 8px 5px #0b666a;
 }

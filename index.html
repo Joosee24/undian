@@ -19,56 +19,62 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <div class="logo">
-      <img
-        src="/asset/png-clipart-jasa-marga-persero-indonesian-rupiah-business-idx-jsmr-business-blue-text-removebg-preview.png"
-        width="20%"
-      />
-      <ul class="nav">
-        <li class="list-nav">pemenang</li>
-        <li class="list-nav">login</li>
-      </ul>
-    </div>
-    <div class="undian">
-      <div class="content">
-        <div class="dropdown" id="button_sayang">
-          <p class="price">Price Pool</p>
-          <div class="option">
-            <button
-              class="btn btn-secondary dropdown-toggle"
-              id="toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Pilih Hadiah
-            </button>
-            <ul class="dropdown-menu" id="ganti">
-              <li>
-                <a class="dropdown-item" href="#" value="mobil">mobil</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#" value="motor">motor</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#" value="hp">hp</a>
-              </li>
-            </ul>
+    <nav>
+      <div class="logo">
+        <img
+          src="/asset/png-clipart-jasa-marga-persero-indonesian-rupiah-business-idx-jsmr-business-blue-text-removebg-preview.png"
+          width="20%"
+        />
+        <ul class="nav">
+          <li class="list-nav">pemenang</li>
+          <li class="list-nav">login</li>
+        </ul>
+      </div>
+    </nav>
+    <main class="isi">
+      <div class="undian">
+        <div class="content">
+          <div class="dropdown" id="button_sayang">
+            <p class="price">Price Pool</p>
+            <div class="option">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                id="toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Pilih Hadiah
+              </button>
+              <ul class="dropdown-menu" id="ganti">
+                <li>
+                  <a class="dropdown-item" href="#" value="mobil">mobil</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" value="motor">motor</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" value="hp">hp</a>
+                </li>
+              </ul>
+            </div>
+            <div class="rendering_img"></div>
           </div>
-          <div class="rendering_img"></div>
+        </div>
+        <div class="peserta">
+          <span>nama-nama pemenang</span>
+          <div id="nama_pemenang_mobil" class="nama_pemenang"></div>
+          <div id="nama_pemenang_motor" class="nama_pemenang"></div>
+          <div id="nama_pemenang_hp" class="nama_pemenang"></div>
+          <div id="nama_pemenang_kucing" class="nama_pemanang"></div>
+
+          <button class="btn btn-danger" id="clear-button">Clear All</button>
         </div>
       </div>
-      <div class="peserta">
-        <span>nama-nama pemenang</span>
-        <div id="nama_pemenang_mobil" class="nama_pemenang"></div>
-        <div id="nama_pemenang_motor" class="nama_pemenang"></div>
-        <div id="nama_pemenang_hp" class="nama_pemenang"></div>
-        <div id="nama_pemenang_kucing" class="nama_pemanang"></div>
-
-        <button class="btn btn-danger" id="clear-button">Clear All</button>
-      </div>
-    </div>
-
+    </main>
+    <footer class="bar-footer">
+      <span>@blom_tau</span>
+    </footer>
     <script src="index.js"></script>
   </body>
 </html>
