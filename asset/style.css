@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --background: linear-gradient(#55ad9b, #95d2b3);
   --background-nav: rgba(0, 128, 128, 0.3);
@@ -16,6 +17,10 @@
 }
 html,
 body {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
   background: var(--background);
   background-attachment: fixed;
   background-size: cover;
@@ -84,15 +89,16 @@ body {
 
 .dropdown {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
   width: max-content;
-  margin: 2rem 0 0 1rem;
+  margin: 1rem 0 0 1rem;
   background-color: var(--background-div);
   box-shadow: 0 2px 4px 2px #0b666a;
   border: 1px solid;
-  padding: 20px;
+  padding: 8px;
   border-radius: 10px;
 }
 
@@ -100,7 +106,12 @@ body {
   background: var(--background-menu);
 }
 
+.dropdown-item {
+  color: #f0f0f0;
+}
+
 #toggle {
+  border: 1px solid #f1f8e8;
   background: var(--background-content);
   background-size: 600%;
   animation: anime 16s linear infinite;
@@ -124,6 +135,8 @@ body {
 
 .price {
   margin: 0;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .list ul {
@@ -135,17 +148,27 @@ body {
 }
 
 .peserta {
+  display: flex;
+  flex-direction: column;
   border: 1px solid;
+  border-radius: 10px;
   width: max-content;
   margin: 1rem 1rem 0 0;
   padding: 1rem;
+  gap: 1rem;
   background-color: var(--background-div);
   box-shadow: 0 2px 4px 2px #0b666a;
 }
 
+#clear-button {
+  background: var(--background-content);
+  background-size: 600%;
+  animation: anime 16s linear infinite;
+  border: 1px solid #f1f8e8;
+  margin-top: auto;
+}
+
 .rendering_img {
-  position: relative;
-  right: 35%;
   max-width: max-content;
   -webkit-animation: scale 3s infinite linear;
 }

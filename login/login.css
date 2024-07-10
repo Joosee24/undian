@@ -1,0 +1,46 @@
+body {
+  background: linear-gradient(#55ad9b, #95d2b3);
+  font-family: "Arial", sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login {
+  background-color: #95d2b3;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-control {
+  margin-bottom: 15px;
+}
+
+.btn-primary {
+  width: 100%;
+  border: 1px solid #f1f8e8;
+  background: linear-gradient(-45deg, #34e89e, #0f3443, #34e89e, #0f3443);
+  background-size: 600%;
+  animation: anime 16s infinite;
+}
+
+@keyframes anime {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
