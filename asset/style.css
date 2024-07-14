@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --background: linear-gradient(#55ad9b, #95d2b3);
   --background-nav: rgba(0, 128, 128, 0.3);
@@ -16,6 +17,8 @@
 }
 html,
 body {
+  font-family: "Poppins", sans-serif;
+  font-variation-settings: "wdth" 100;
   background: var(--background);
   background-attachment: fixed;
   background-size: cover;
@@ -72,35 +75,26 @@ body {
   transform-origin: bottom left;
 }
 
-.undian {
-  display: flex;
-  gap: 3rem;
-  justify-content: space-between;
+h1 {
+  padding-left: 10px;
 }
 
-.content {
-  display: flex;
+h1,
+h2 {
+  font-weight: 500;
+  font-size: 25px;
 }
 
-.dropdown {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 1rem;
-  width: max-content;
-  margin: 2rem 0 0 1rem;
-  background-color: var(--background-div);
-  box-shadow: 0 2px 4px 2px #0b666a;
-  border: 1px solid;
-  padding: 20px;
-  border-radius: 10px;
+#container {
+  background: var(--background-div);
 }
 
-.dropdown-menu {
-  background: var(--background-menu);
+#colom-2 {
+  padding: 12px;
 }
 
 #toggle {
+  border: 1px solid #f1f8e8;
   background: var(--background-content);
   background-size: 600%;
   animation: anime 16s linear infinite;
@@ -117,14 +111,6 @@ body {
     background-position: 0% 50%;
   }
 }
-/* .option {
-  display: flex;
-  flex-direction: column;
-} */
-
-.price {
-  margin: 0;
-}
 
 .list ul {
   padding: 0;
@@ -134,18 +120,15 @@ body {
   list-style: none;
 }
 
-.peserta {
-  border: 1px solid;
-  width: max-content;
-  margin: 1rem 1rem 0 0;
-  padding: 1rem;
-  background-color: var(--background-div);
-  box-shadow: 0 2px 4px 2px #0b666a;
+#clear-button {
+  background: var(--background-content);
+  background-size: 600%;
+  animation: anime 16s linear infinite;
+  border: 1px solid #f1f8e8;
+  margin-top: auto;
 }
 
 .rendering_img {
-  position: relative;
-  right: 35%;
   max-width: max-content;
   -webkit-animation: scale 3s infinite linear;
 }
