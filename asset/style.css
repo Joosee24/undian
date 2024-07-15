@@ -83,10 +83,13 @@ h1,
 h2 {
   font-weight: 500;
   font-size: 25px;
+  color: var(--font-nav);
 }
 
 #container {
   background: var(--background-div);
+  box-shadow: 2px 2px 8px;
+  margin-top: 2rem;
 }
 
 #colom-2 {
@@ -120,12 +123,10 @@ h2 {
   list-style: none;
 }
 
-#clear-button {
-  background: var(--background-content);
-  background-size: 600%;
-  animation: anime 16s linear infinite;
-  border: 1px solid #f1f8e8;
-  margin-top: auto;
+.fixed-size-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
 }
 
 .rendering_img {

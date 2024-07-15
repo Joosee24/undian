@@ -11,8 +11,6 @@ $(document).ready(function () {
     return array;
   }
 
-  //function buat show hide
-
   function showWinners(prizeType) {
     $(".nama_pemenang").hide();
     $(`#nama_pemenang_${prizeType}`).show();
@@ -47,7 +45,8 @@ $(document).ready(function () {
       updateWinners("hp", winners);
     }
 
-    var img_ctl = '<img src="' + img_src + '" alt="image">';
+    var img_ctl =
+      '<img src="' + img_src + '" alt="image" class="fixed-size-img">';
     $(".rendering_img").html(img_ctl);
 
     showWinners(value);
@@ -59,11 +58,9 @@ $(document).ready(function () {
 
   // Initially hide all winner lists
   $(".nama_pemenang").hide();
-});
 
-// fungsi clear button
-$("#clear-button").click(function () {
-  $(".nama_pemenang").empty();
+  // Set default to mobil
+  var defaultWinners = shuffle(nama_mobil.slice());
+  updateWinners("mobil", defaultWinners);
+  showWinners("mobil");
 });
-
-$(".nama_pemenang").hide();
