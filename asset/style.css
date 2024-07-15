@@ -2,16 +2,16 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
-  --background: linear-gradient(#55ad9b, #95d2b3);
-  --background-nav: rgba(0, 128, 128, 0.3);
-  --font-nav: #f1f8e8;
+  --background: linear-gradient(#27a5d7, #e9e9e9);
+  --background-nav: #27a5d7;
+  --font-nav: #202020;
   --background-div: #95d2b3;
   --background-content: linear-gradient(
     -45deg,
-    #34e89e,
-    #0f3443,
-    #34e89e,
-    #0f3443
+    #253f7b,
+    #27a5d7,
+    #253f7b,
+    #27a5d7
   );
   --background-menu: linear-gradient(#34e89e, #0f3443);
 }
@@ -37,7 +37,7 @@ body {
   justify-content: space-between;
   background: var(--background-nav);
   backdrop-filter: blur(20px);
-  box-shadow: 0 4px 8px #0b666a;
+  box-shadow: 0 4px 8px #253f7b;
 }
 
 .nav {
@@ -92,8 +92,7 @@ h2 {
 }
 
 #container {
-  background: var(--background-div);
-  box-shadow: 2px 2px 8px;
+  box-shadow: 1px 1px 7px #253f7b;
   margin-top: 2rem;
 }
 
@@ -152,5 +151,5 @@ h2 {
   background: var(--background-nav);
   color: var(--font-nav);
   backdrop-filter: blur(20px);
-  box-shadow: 0 4px 8px 5px #0b666a;
+  box-shadow: 0 4px 5px 5px #253f7b;
 }
