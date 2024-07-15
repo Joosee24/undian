@@ -57,6 +57,11 @@ body {
   color: inherit;
 }
 
+.list-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .list-nav::after {
   content: "";
   position: absolute;
