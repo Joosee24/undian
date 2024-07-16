@@ -17,6 +17,7 @@
 }
 html,
 body {
+  position: relative;
   font-family: "Poppins", sans-serif;
   font-variation-settings: "wdth" 100;
   background: var(--background);
@@ -26,6 +27,15 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  z-index: 3;
+}
+
+.background-image {
+  position: absolute;
+  top: 35%;
+  left: 12%;
+  /* right: 10%; */
+  z-index: 0;
 }
 
 .isi {
@@ -93,7 +103,8 @@ h2 {
 
 #container {
   box-shadow: 1px 1px 7px #253f7b;
-  margin-top: 2rem;
+  position: relative;
+  top: 17%;
 }
 
 #colom-2 {
@@ -136,6 +147,7 @@ h2 {
 .rendering_img {
   max-width: max-content;
   -webkit-animation: scale 3s infinite linear;
+  z-index: 2;
 }
 
 @-webkit-keyframes scale {

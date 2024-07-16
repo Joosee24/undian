@@ -11,6 +11,10 @@ html {
   align-items: center;
 }
 
+body {
+  background-image: url("/asset/banner-SK-_1_-removebg-preview.png");
+}
+
 .login-container {
   background: #95d2b3;
   padding: 2rem;
